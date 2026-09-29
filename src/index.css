@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #09090b;
+    color: #f4f4f5;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Atmospheric Animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.05) translateY(-6px);
+  }
+}
+
+@keyframes orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shimmer-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes sound-wave-bar {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 18px;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.animate-orbit {
+  animation: orbit-spin 20s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: orbit-spin-reverse 15s linear infinite;
+}
+
+.animate-shimmer-border {
+  background-size: 200% 200%;
+  animation: shimmer-border 6s ease infinite;
+}
+
+.animate-sound-wave-1 {
+  animation: sound-wave-bar 1.2s ease-in-out infinite;
+}
+.animate-sound-wave-2 {
+  animation: sound-wave-bar 0.9s ease-in-out infinite 0.2s;
+}
+.animate-sound-wave-3 {
+  animation: sound-wave-bar 1.4s ease-in-out infinite 0.4s;
+}
+.animate-sound-wave-4 {
+  animation: sound-wave-bar 1.1s ease-in-out infinite 0.1s;
+}

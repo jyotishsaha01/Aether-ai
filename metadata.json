@@ -1,0 +1,6 @@
+{
+  "name": "Aether: Agentic AI Studio",
+  "description": "Advanced Agentic AI workspace inspired by Gemini, ChatGPT, and Claude. Features autonomous tool execution, deep research, live code canvas artifacts, multi-step chain-of-thought, and multi-agent personas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
